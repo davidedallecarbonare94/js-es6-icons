@@ -139,3 +139,41 @@ icons.forEach((icon) => {
 
 //Milestone 3 Creiamo una select con i tipi di icone e usiamola per filtrare le icone
 
+var filter = document.querySelector("select");
+filter.addEventListener("change", function () {
+    icons.forEach(icon => {
+        if (icon.type === "all") {
+            document.getElementById("all").insertAdjacentHTML("beforeend",
+                `
+    <div class="icons">
+    <i class="${icon.family} ${icon.prefix}${icon.name}" style="color: ${icon.color};"></i>
+    <h3>${icon.name}</h3>
+    </div>
+    `)
+        } else if (icon.type === "animal") {
+            document.getElementById("animal").insertAdjacentHTML("beforeend",
+                `
+    <div class="icons">
+    <i class="${icon.family} ${icon.prefix}${icon.name}" style="color: ${icon.color};"></i>
+    <h3>${icon.name}</h3>
+    </div>
+    `)
+        } else if (icon.type === "vegetables") {
+            document.getElementById("vegetables").insertAdjacentHTML("beforeend",
+                `
+    <div class="icons">
+    <i class="${icon.family} ${icon.prefix}${icon.name}" style="color: ${icon.color};"></i>
+    <h3>${icon.name}</h3>
+    </div>
+    `)
+        } else if (icon.type === "user") {
+            document.getElementById("user").insertAdjacentHTML("beforeend",
+                `
+    <div class="icons">
+    <i class="${icon.family} ${icon.prefix}${icon.name}" style="color: ${icon.color};"></i>
+    <h3>${icon.name}</h3>
+    </div>
+    `)
+        }
+    
+    })})
