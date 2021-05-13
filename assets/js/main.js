@@ -115,13 +115,30 @@ Partendo dalla seguente struttura dati,
 //mostriamo in pagina tutte le icone disponibili come da layout.
 
 */
+//Milestone 2 Coloriamo le icone per tipo
+
+
 
 icons.forEach((icon) => {
+    
     document.getElementById("icon_container").insertAdjacentHTML("beforeend",
     `
-        <div>
-            <i class="${icon.prefix}${icon.name}"></i>
-            <h3>${icon.name}</h3>
-        </div>
+    <div class="icons">
+    <i class="${icon.family} ${icon.prefix}${icon.name}; style="color:${icon.colorFamily}"></i>
+    <h3>${icon.name}</h3>
+    </div>
     `)
-} )
+});
+
+icons.forEach(icon => {
+    icon.colorFamily
+    if (icon.family === "animal") {
+        icon.colorFamily = "blue"
+    } else if (icon.family === "vegetable") {
+        icon.colorFamily = "orange"
+    } else if (icon.family === "user"){
+        icon.colorFamily = "purple"
+    }
+})
+console.log(icons);
+
