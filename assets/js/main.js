@@ -110,20 +110,6 @@ let icons = [
 	}
 ];
 
-/* 
-Partendo dalla seguente struttura dati, 
-//mostriamo in pagina tutte le icone disponibili come da layout. */
-
-icons.forEach((icon) => {
-    document.getElementById("icon_container").insertAdjacentHTML("beforeend",
-    `
-    <div class="icons">
-    <i class="${icon.family} ${icon.prefix}${icon.name}" style = "color: ${icon.color}"></i>
-    <h3>${icon.name}</h3>
-    </div>
-    `)
-});
-
 //Milestone 2 Coloriamo le icone per tipo
 
 icons.forEach(icon => {
@@ -137,6 +123,20 @@ icons.forEach(icon => {
     }
 })
 console.log(icons);
+/* 
+Partendo dalla seguente struttura dati, 
+//mostriamo in pagina tutte le icone disponibili come da layout. */
+
+icons.forEach((icon) => {
+    document.getElementById("icon_container").insertAdjacentHTML("beforeend",
+    `
+    <div class="icons">
+    <i class="${icon.family} ${icon.prefix}${icon.name}" style="color: ${icon.color};"></i>
+    <h3>${icon.name}</h3>
+    </div>
+    `)
+});
+
 
 
 
