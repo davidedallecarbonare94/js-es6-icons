@@ -112,15 +112,9 @@ let icons = [
 
 /* 
 Partendo dalla seguente struttura dati, 
-//mostriamo in pagina tutte le icone disponibili come da layout.
-
-*/
-//Milestone 2 Coloriamo le icone per tipo
-
-
+//mostriamo in pagina tutte le icone disponibili come da layout. */
 
 icons.forEach((icon) => {
-    
     document.getElementById("icon_container").insertAdjacentHTML("beforeend",
     `
     <div class="icons">
@@ -130,8 +124,11 @@ icons.forEach((icon) => {
     `)
 });
 
+//Milestone 2 Coloriamo le icone per tipo
+
 icons.forEach(icon => {
-    icon.colorFamily
+    
+    icon.colorFamily = "";
     if (icon.family === "animal") {
         icon.colorFamily = "blue"
     } else if (icon.family === "vegetable") {
@@ -141,4 +138,7 @@ icons.forEach(icon => {
     }
 })
 console.log(icons);
+
+
+
 
