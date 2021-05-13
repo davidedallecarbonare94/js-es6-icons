@@ -118,7 +118,7 @@ icons.forEach((icon) => {
     document.getElementById("icon_container").insertAdjacentHTML("beforeend",
     `
     <div class="icons">
-    <i class="${icon.family} ${icon.prefix}${icon.name}; style="color:${icon.colorFamily}"></i>
+    <i class="${icon.family} ${icon.prefix}${icon.name}" style = "color: ${icon.color}"></i>
     <h3>${icon.name}</h3>
     </div>
     `)
@@ -127,14 +127,13 @@ icons.forEach((icon) => {
 //Milestone 2 Coloriamo le icone per tipo
 
 icons.forEach(icon => {
-    
-    icon.colorFamily = "";
-    if (icon.family === "animal") {
-        icon.colorFamily = "blue"
-    } else if (icon.family === "vegetable") {
-        icon.colorFamily = "orange"
-    } else if (icon.family === "user"){
-        icon.colorFamily = "purple"
+    icon.color = "";
+    if (icon.type === "animal") {
+        icon.color = "blue"
+    } else if (icon.type === "vegetable") {
+        icon.color = "orange"
+    } else if (icon.type === "user"){
+        icon.color = "purple"
     }
 })
 console.log(icons);
