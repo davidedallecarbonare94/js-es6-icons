@@ -3,6 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+.title {
+    height: 80px;
+}
+.title h1 {
+    color: blue;
+    font-size: 3rem;
+}
+.selector{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 #icon_container {
     display: flex;
